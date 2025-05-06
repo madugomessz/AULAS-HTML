@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Display e Borda</title>
+
+    <style>
+        #ContainerPai{
+            /*background-color: rgb(60, 0, 116);*/
+            width: 1000px;
+            height: 600px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .filho{
+           /*background-color: rgb(233, 64, 248);*/
+            width: 300px;
+            height: 400px;
+            /*border: 10px solid #7e0083;*/
+            border-radius: 50px;
+            box-shadow: 5px 5px 10px #910085;
+            display: flex;
+            justify-content: space-evenly;
+          
+
+        }
+
+        .neto{
+            background-color: #910085;
+            width: 150px;
+            height: 200px;
+            margin-top: 40px;
+            box-shadow: 5px 5px 10px #e967de ;
+            
+
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section id="ContainerPai">
+
+            <div class="filho">
+                <div class="neto"></div>
+            </div>
+
+            <div class="filho">
+                <div class="neto"></div>
+            </div>
+
+            <div class="filho">
+                <div class="neto"></div>
+            </div>
+
+        </section>
+    </main>
+</body>
+</html>
