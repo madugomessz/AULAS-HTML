@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Corrigindo erros de pseudoclasses</title>
+    <style>
+        header{
+            background-color: cadetblue;
+            width: 1000px;
+            height: 50px;
+            margin: auto;
+        }
+
+        #direita{
+            background-color: burlywood;
+            width: 350px;
+            height: 50px;
+            float: right;
+            padding: 20px 0 0 20px;
+            box-sizing: border-box; /*adiciona o preenchimento ao tamanho total do elemento*/
+        }
+
+        #esquerda{
+            background-color: rgb(42, 99, 165);
+            width: 250px;
+            height: 50px;
+        }
+
+        /* Usando o clear */
+
+        .testeA01{
+            border: 3px solid rgb(151, 39, 101);
+            width: 100px;
+            height: 50px;
+            margin: 10px;
+            float: left;
+        }
+
+        .testeA02{
+            border: 4px solid purple;
+        }
+
+        .testeB01{
+            border: 4px solid brown;
+            width: 100px;
+            height: 50px;
+            margin: 10px;
+            float: right;
+        }
+
+        .testeB02{
+            border: 4px solid burlywood;
+            clear: left;
+        }
+
+        /* pseudoclasses trabalhando com link */
+
+        a:link{
+            text-decoration: none; /*troca a cor do link*/
+            color: #fff7f7;
+        }
+
+        a:visited{
+            color: cadetblue; /*depois de visitar a cor muda*/
+        }
+
+        a:hover{
+            color: dodgerblue;/*quando o mouse passar por cima do link*/
+        }
+
+        a:active{
+            color: darkgoldenrod;/*quando clicar a cor muda*/
+        }
+    </style>
+</head>
+
+    <body>
+        <header>
+            <div id="direita">
+                <nav>
+                    <a href="#">Home</a>|
+                    <a href="#">Home</a>|
+                    <a href="#">Home</a>|
+                    <a href="#">Home</a>|
+                </nav>
+            </div>
+            <div id="esquerda"></div>
+        </header> 
+
+        <!--usando o elemento clear-->
+
+       <section>
+            <h2>Sem clear</h2>
+            <div class="testeA01">Nome</div>
+            <div class="testeA02">Lorem ipsum dolor sit amet consectetur adipisicing elit. In nulla, debitis quasi odit dolorem temporibus possimus perferendis hic fugiat pariatur enim id, cumque doloremque nostrum veniam velit. Ea, ut debitis!</div>
+
+            <br><br>
+
+            <h2>Com clear</h2>
+            <div class="testeB01">Nome</div>
+            <div class="testeB02">Lorem ipsum dolor sit amet consectetur adipisicing elit. In nulla, debitis quasi odit dolorem temporibus possimus perferendis hic fugiat pariatur enim id, cumque doloremque nostrum veniam velit. Ea, ut debitis!</div>
+
+        </section>
+    </body>
+</html>
